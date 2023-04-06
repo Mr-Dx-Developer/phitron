@@ -4,23 +4,26 @@
 #include <stdlib.h>
 
 int main() {
-    long long int N;
-    scanf("%lld", &N);
+    int N;
+    scanf("%d", &N);
 
-    if(N)
+
+    int sum = 0;
+    while(N>0)
     {
-        if(0 <= N )
-        {
-            if(N<= 10^9)
-            {
-            printf("Yes");
-        }
-        else
-        {
-            printf("No");
-        }
-        }
+        sum += N%10;
+        N/=10;
     }
+
+    if(sum % 3 == 0)
+    {
+        printf("YES");
+    }
+    else
+    {
+        printf("NO");
+    }
+    
 
     
 
