@@ -5,12 +5,12 @@ int main() {
     char s[1000];
     scanf("%s", s);
     int l = strlen(s);
-    int alphacount[26] = {0};
+    int ac[26] = {0};
     for (int i = 0; i < l; i++) {
-        alphacount[s[i] - 'a']++;
+        ac[s[i] - 'a']++;
     }
     for (int i = 0; i < 26; i++) {
-        printf("%c - %d\n", 'a' + i, alphacount[i]);
+        printf("%c - %d\n", 'a' + i, ac[i]);
     }
     return 0;
 }
